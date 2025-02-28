@@ -51,3 +51,11 @@ highest score will be assigned a rank of 1, the second highest a rank of 2, and 
 - <score> is the actual score the document obtained for that query.
 - <run> is the name of the run. You can use any value here. It is meant to allow research
 teams to submit multiple runs for evaluation in competitions such as TREC.
+
+
+###  Query Processing
+Before running any scoring function, you should process the text of the query in exactly the same
+way that you processed the text of a document for your inverted index. That is:
+1. Split the query into tokens
+2. Apply stop-wording to the query using the same list you used in assignment 1
+3. Apply the same stemming algorithm to the query which you used in your indexer
