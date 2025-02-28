@@ -31,8 +31,23 @@ $ ./query.py --score TF-IDF
 202 clueweb12-0000tw-13-04901 2 0.33 run1
 202 clueweb12-0000tw-13-04932 3 0.32 run1
 ...
+
+
+
 214 clueweb12-0000tw-13-05088 1 0.73 run1
 214 clueweb12-0000tw-13-05001 2 0.33 run1
 214 clueweb12-0000tw-13-05032 3 0.32 run1
 ...
 250 clueweb12-0000tw-13-05032 500 0.002 run1
+
+The output should have one row for each document which your program ranks for each query it
+runs. These lines should have the format:
+
+<topic> <docid> <rank> <score> <run>
+- <topic> is the ID of the query for which the document was ranked.
+- <docid> is the document identifier.
+- <rank> is the order in which to present the document to the user. The document with the
+highest score will be assigned a rank of 1, the second highest a rank of 2, and so on.
+- <score> is the actual score the document obtained for that query.
+- <run> is the name of the run. You can use any value here. It is meant to allow research
+teams to submit multiple runs for evaluation in competitions such as TREC.
