@@ -68,3 +68,25 @@ scores. This should be very similar to the TF score, but use the following scori
  
 where D is the total number of documents, and df(i) is the number of documents which contain term
 i.
+
+### Scoring Function 2: Okapi BM25
+Implement BM25 scores. 
+
+### Scoring Function 3: Language model with Dirichlet Smoothing
+Implement a language model with Dirichlet smoothing. The parameter mu should be set equal to
+average document length in collection.
+Evaluation
+
+To evaluate your results, we will write a program that computes mean average precision (MAP)
+of the rank list of documents for different queries. The input to program will be the qrel file
+(relevance judgments) and scoring file that has rank list of documents. The output should be
+following measures
+
+P@5
+P@10
+P@20
+P@30
+MAP
+
+These measures should be computed for each query. Average for all queries should also be
+computed.
