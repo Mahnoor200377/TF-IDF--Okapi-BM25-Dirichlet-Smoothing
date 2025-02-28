@@ -17,12 +17,16 @@ o <doc> is the name of one of the documents which you have indexed.
 o <grade> is a value in the set {1, 2, 3, 4}, where a higher value means that the
 document is more relevant to the query. The value 1 indicates a document which
 is non-relevant.
+
 This QREL does not have assessments for every (query, document) pair. If an assessment
 is missing, we assume the correct grade for the pair is 1 (non-relevant).
 You will write a program which takes the name of a scoring function as a command line
 argument and which prints a ranked list of documents for all queries found in topics.xml using
 that scoring function. For example:
+
+
 $ ./query.py --score TF-IDF
+
 202 clueweb12-0000tw-13-04988 1 0.73 run1
 202 clueweb12-0000tw-13-04901 2 0.33 run1
 202 clueweb12-0000tw-13-04932 3 0.32 run1
