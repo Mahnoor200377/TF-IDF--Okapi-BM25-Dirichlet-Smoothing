@@ -9,7 +9,9 @@ For this assignment, you will need the following two files:
 - qrels: It contains the relevance grades from expert assessors. While these grades are not
 necessarily entirely correct (and defining correctness unambiguously is quite difficult),
 they are fairly reliable and we will treat them as being correct here.
+
 The format here is:
+
 o <topic> is the ID of the query for which the document was assessed
 o <doc> is the name of one of the documents which you have indexed.
 o <grade> is a value in the set {1, 2, 3, 4}, where a higher value means that the
