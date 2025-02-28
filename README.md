@@ -59,3 +59,12 @@ way that you processed the text of a document for your inverted index. That is:
 1. Split the query into tokens
 2. Apply stop-wording to the query using the same list you used in assignment 1
 3. Apply the same stemming algorithm to the query which you used in your indexer
+
+### Scoring Function 1: TF-IDF
+The parameter --score TF-IDF directs your program to use a vector space model with TF-IDF
+scores. This should be very similar to the TF score, but use the following scoring function:
+
+ d=oktf(d,i). log D/df(i)
+ 
+where D is the total number of documents, and df(i) is the number of documents which contain term
+i.
